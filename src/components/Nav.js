@@ -19,8 +19,8 @@ import {NavLink } from 'react-router-dom'
     }
     render() {
       const {authedUser ,users} = this.props
-      const avatar = users[authedUser] ? users[authedUser].avatarURL : ''
-      const name = users[authedUser] ? users[authedUser].name : ''
+      const avatar = users[authedUser]?.avatarURL ?? '';
+      const name = users[authedUser]?.name ?? '';
       
       const {activeItem} = this.state
       
@@ -49,7 +49,7 @@ import {NavLink } from 'react-router-dom'
                 active={activeItem === 'add-poll'}
                 onClick={this.handleItemClick}
                 as={NavLink}
-                exact to="/new"
+                exact to="/add"
                 >
                 Add Poll
                 </Menu.Item>

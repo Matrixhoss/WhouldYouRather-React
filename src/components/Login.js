@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {receiveAuthedUser} from '../actions/authedUser'
 import {Segment ,Dropdown, Button ,Grid,Header } from 'semantic-ui-react'
-import {Link} from 'react-router-dom'
+
 
 
 
@@ -52,14 +52,14 @@ class Login extends Component {
                     <Grid.Row>
                       
                         <Grid.Column textAlign="center">
-                          <Link to='/'>
+                          
                             <Button 
                             onClick={() =>this.handleLogin(dispatch) } 
                             color='green'
                             disabled={this.state.selectedUser===""}
                             > Login
                             </Button>
-                          </Link>
+                         
 
                         </Grid.Column>
                         </Grid.Row>

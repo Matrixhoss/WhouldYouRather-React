@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React  from 'react'
 import {connect} from 'react-redux'
 import {Grid ,Image ,Label ,Segment, Header } from 'semantic-ui-react'
 
 
-class UserCard extends Component {
-    render() {
-        const {avatar ,name ,aScore ,qScore ,totalScore ,order} = this.props
+const UserCard = (props)=> {
+    
+        const {avatar ,name ,aScore ,qScore ,totalScore ,order} = props
         let color = 'white'
         switch(order){
             case 0 : color = 'yellow' 
@@ -41,7 +41,7 @@ class UserCard extends Component {
                  </Grid>
             </Segment.Group>
         )
-    }
+    
 }
 
 function mapStateToProps({users},{id ,order}){

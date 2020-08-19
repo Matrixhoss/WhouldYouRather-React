@@ -12,7 +12,7 @@ class QuestionPage extends Component {
     render() {
         const {question , quser ,authedAnswers, questionFound } = this.props
 
-        if (questionFound === false){return <Redirect to='/notfound'/>}
+        if (questionFound === false){return <Redirect to='/404'/>}
 
         const isAnswerd = authedAnswers.includes(question.id) 
        

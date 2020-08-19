@@ -27,12 +27,12 @@ class App extends Component {
         {this.props.loading ? 
           <LoadingBar />: 
           <TheContainer>
-            {this.props.authedUser === "" ? <Route component={Login} /> : 
+            {this.props.authedUser === null ? <Route component={Login} /> : 
             <div>
               <Nav />
               <Switch>
                 <Route path='/' exact component={QuestionsList} />
-                <Route path='/new' component={AddNewQuestion}/>
+                <Route path='/add' component={AddNewQuestion}/>
                 <Route path='/leaderboard' component={Leaderboard}  />
                 <Route path="/questions/:question_id" component={QuestionPage} />
                 <Route path='*' exact={true} component={NotFound} />

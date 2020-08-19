@@ -7,11 +7,12 @@ class UnanswerdQuestion extends Component {
     state = {}
     handleChange = (e, { value }) => this.setState({ value })
     handleSubmit =() => {
-        const {question  , authedUser , dispatch} =this.props
+        const {question  , authedUser , answerQuestion} =this.props
         const qid = question.id
         const answer = this.state.value === 'First' ? 'optionOne' : 'optionTwo'
 
-        dispatch(handleAnswerQuestion(authedUser , qid , answer))
+        answerQuestion(authedUser , qid , answer)
+    
     }
     render() {
         const {question} =this.props
@@ -62,4 +63,10 @@ function mapStateToProps ({loader, questions ,authedUser} , {id}){
     }
 
 }
-export default connect(mapStateToProps)(UnanswerdQuestion)
+
+function mapDispatchToProps (dispatch) {
+    return {
+      answerQuestion: (authedUser , qid , answer) => dispatch(handleAnswerQuestion(authedUser , qid , answer)),
+    }
+  }
+export default connect(mapStateToProps ,mapDispatchToProps)(UnanswerdQuestion)
