@@ -1,6 +1,5 @@
 ## Project Link
-https://www.would-you-rather-game-react.netlify.app
-
+https://would-you-rather-game-react.netlify.app/
 ## Available Scripts
 
 In the project directory, you can run:
