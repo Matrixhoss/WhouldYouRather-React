@@ -1,5 +1,5 @@
 ## Project Link
-www.would-you-rather-game-react.netlify.app
+https://www.would-you-rather-game-react.netlify.app
 
 ## Available Scripts
 
